@@ -12,10 +12,10 @@ export default function TermsPage() {
         <nav className="max-w-4xl mx-auto flex items-center justify-between">
           <Link href="/" className="flex items-center space-x-3">
             <div className="w-10 h-10 relative">
-              <Image 
-                src={icon} 
-                alt="눈칫 로고" 
-                width={40} 
+              <Image
+                src={icon}
+                alt="눈칫 로고"
+                width={40}
                 height={40}
                 className="rounded-xl"
                 onError={(e) => {
@@ -37,7 +37,7 @@ export default function TermsPage() {
             </div>
           </Link>
           
-          <Link 
+          <Link
             href="/"
             className="text-slate-300 hover:text-white transition-colors duration-300"
           >
@@ -58,7 +58,7 @@ export default function TermsPage() {
               
               <section>
                 <h2 className="text-2xl font-semibold text-white mb-4">제 1조 목적</h2>
-                <p>본 약관은 눈칫(Noonchit)(이하 "회사"라 함)에서 제공하는 눈칫 및 눈칫 관련 제반 서비스(이하 "서비스"라 함)를 이용함에 있어 회사와 회원과의 권리, 의무 및 책임사항, 기타 필요한 사항을 규정하는 것을 목적으로 합니다.</p>
+                <p>본 약관은 눈칫(Noonchit)(이하 &quot;회사&quot;라 함)에서 제공하는 눈칫 및 눈칫 관련 제반 서비스(이하 &quot;서비스&quot;라 함)를 이용함에 있어 회사와 회원과의 권리, 의무 및 책임사항, 기타 필요한 사항을 규정하는 것을 목적으로 합니다.</p>
               </section>
 
               <section>
@@ -82,7 +82,7 @@ export default function TermsPage() {
               <section>
                 <h2 className="text-2xl font-semibold text-white mb-4">제 4조 이용 계약의 성립</h2>
                 <ol className="list-decimal list-inside space-y-2">
-                  <li>서비스 가입 신청 시 본 약관을 읽고 "동의함" 버튼을 클릭하면 본 약관에 동의하는 것으로 간주됩니다.</li>
+                  <li>서비스 가입 신청 시 본 약관을 읽고 &quot;동의함&quot; 버튼을 클릭하면 본 약관에 동의하는 것으로 간주됩니다.</li>
                   <li>이용약관은 서비스 이용희망자의 이용약관 동의 후 이용 신청에 대하여 회사가 승낙함으로써 성립됩니다.</li>
                   <li>가입신청자는 제 1항의 이용 신청 시 본인의 실명 및 실제 정보를 기재하여야 합니다. 내용이 사실과 다를 경우(차명, 비 실명, 허위정보 등)와 타인의 정보를 도용한 것으로 의심되는 경우 사실 여부를 확인하기 위해 재 증명을 요구할 수 있으며 상이한 사실이 명백하게 확인되는 경우, 본 약관에 의한 회원의 권리를 주장할 수 없고, 회사는 회원에게 환급 없이 회원의 권한을 삭제하며 서비스의 전면적인 이용을 거부할 수 있고, 이로 인해 발생하는 모든 불이익은 회사가 책임지지 않습니다.</li>
                 </ol>
@@ -99,7 +99,7 @@ export default function TermsPage() {
               <section>
                 <h2 className="text-2xl font-semibold text-white mb-4">제 6조 이용 계약 체결</h2>
                 <ol className="list-decimal list-inside space-y-2">
-                  <li>이용계약은 서비스를 이용하려는 자(이하 "가입신청자")가 "눈칫" 서비스 및 제반 서비스에서 제공하는 약관에 동의한 다음 회원가입 신청을 하고 회사가 이러한 신청에 대하여 승낙함으로써 체결됩니다. 필요한 경우 회사는 본인 확인 기관을 통한 실명확인 및 본인인증을 요청할 수 있습니다.</li>
+                  <li>이용계약은 서비스를 이용하려는 자(이하 &quot;가입신청자&quot;)가 &quot;눈칫&quot; 서비스 및 제반 서비스에서 제공하는 약관에 동의한 다음 회원가입 신청을 하고 회사가 이러한 신청에 대하여 승낙함으로써 체결됩니다. 필요한 경우 회사는 본인 확인 기관을 통한 실명확인 및 본인인증을 요청할 수 있습니다.</li>
                   <li>카카오, 구글, 애플 등 외부 서비스와의 연동을 통해 회원가입 신청을 한 경우, 가입신청자가 이 약관과 개인정보처리방침, 서비스 제공을 위해 회사가 회원의 외부 서비스 계정 정보 접근 및 활용에 동의하고 회사가 이러한 신청에 승낙함으로써 이용계약이 체결됩니다.</li>
                   <li>회사는 업무 수행상 또는 기술상 지장이 있을 경우 일정시간 가입승인을 유보할 수 있습니다.</li>
                 </ol>

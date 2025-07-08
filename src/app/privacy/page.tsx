@@ -58,7 +58,7 @@ export default function PrivacyPage() {
               
               <section>
                 <h2 className="text-2xl font-semibold text-white mb-4">제 1조 개인정보의 처리 목적</h2>
-                <p className="mb-4">'눈칫(Noonchit)'은 다음의 목적을 위하여 개인정보를 처리하고 있으며, 다음의 목적 이외의 용도로는 이용하지 않습니다.</p>
+                <p className="mb-4">&apos;눈칫(Noonchit)&apos;은 다음의 목적을 위하여 개인정보를 처리하고 있으며, 다음의 목적 이외의 용도로는 이용하지 않습니다.</p>
                 <ul className="list-disc list-inside space-y-2 ml-4">
                   <li>회원 가입 의사 확인 및 본인 식별·인증</li>
                   <li>회원자격 유지 및 관리</li>
@@ -72,7 +72,7 @@ export default function PrivacyPage() {
 
               <section>
                 <h2 className="text-2xl font-semibold text-white mb-4">제 2조 개인정보의 처리 및 보유 기간</h2>
-                <p className="mb-4">'눈칫'은 정보주체로부터 개인정보를 수집할 때 동의받은 개인정보 보유·이용기간 또는 법령에 따른 개인정보 보유·이용기간 내에서 개인정보를 처리·보유합니다.</p>
+                <p className="mb-4">&apos;눈칫&apos;은 정보주체로부터 개인정보를 수집할 때 동의받은 개인정보 보유·이용기간 또는 법령에 따른 개인정보 보유·이용기간 내에서 개인정보를 처리·보유합니다.</p>
                 <p className="mb-4">구체적인 개인정보 처리 및 보유 기간은 다음과 같습니다:</p>
                 <ul className="list-disc list-inside space-y-2 ml-4">
                   <li><span className="font-semibold text-blue-400">회원 가입 및 관리:</span> 서비스 이용계약 또는 회원가입 해지 시까지, 다만 채권·채무관계 잔존 시에는 해당 채권·채무관계 정산 시까지</li>
@@ -84,19 +84,19 @@ export default function PrivacyPage() {
 
               <section>
                 <h2 className="text-2xl font-semibold text-white mb-4">제 3조 정보주체의 권리·의무 및 그 행사방법</h2>
-                <p className="mb-4">정보주체는 '눈칫'에 대해 언제든지 다음 각 호의 개인정보 보호 관련 권리를 행사할 수 있습니다:</p>
+                <p className="mb-4">정보주체는 &apos;눈칫&apos;에 대해 언제든지 다음 각 호의 개인정보 보호 관련 권리를 행사할 수 있습니다:</p>
                 <ol className="list-decimal list-inside space-y-2">
                   <li><span className="font-semibold text-green-400">개인정보 열람 요구</span></li>
                   <li><span className="font-semibold text-green-400">오류 등이 있을 경우 정정 요구</span></li>
                   <li><span className="font-semibold text-green-400">삭제 요구</span></li>
                   <li><span className="font-semibold text-green-400">처리정지 요구</span></li>
                 </ol>
-                <p className="mt-4 text-slate-400">위 권리 행사는 개인정보보호법 시행령 제41조에 따라 서면, 전자우편, 모사전송(FAX) 등을 통하여 하실 수 있으며, '눈칫'은 이에 대해 지체 없이 조치하겠습니다.</p>
+                <p className="mt-4 text-slate-400">위 권리 행사는 개인정보보호법 시행령 제41조에 따라 서면, 전자우편, 모사전송(FAX) 등을 통하여 하실 수 있으며, &apos;눈칫&apos;은 이에 대해 지체 없이 조치하겠습니다.</p>
               </section>
 
               <section>
                 <h2 className="text-2xl font-semibold text-white mb-4">제 4조 처리하는 개인정보의 항목</h2>
-                <p className="mb-4">'눈칫'은 다음의 개인정보 항목을 처리하고 있습니다:</p>
+                <p className="mb-4">&apos;눈칫&apos;은 다음의 개인정보 항목을 처리하고 있습니다:</p>
                 <div className="bg-slate-800/50 rounded-lg p-6 mb-4">
                   <h3 className="text-lg font-semibold text-purple-400 mb-3">필수항목</h3>
                   <ul className="list-disc list-inside space-y-1 ml-4">
@@ -125,7 +125,7 @@ export default function PrivacyPage() {
 
               <section>
                 <h2 className="text-2xl font-semibold text-white mb-4">제 5조 개인정보의 파기</h2>
-                <p className="mb-4">'눈칫'은 원칙적으로 개인정보 처리목적이 달성된 경우에는 지체 없이 해당 개인정보를 파기합니다. 파기의 절차, 기한 및 방법은 다음과 같습니다:</p>
+                <p className="mb-4">&apos;눈칫&apos;은 원칙적으로 개인정보 처리목적이 달성된 경우에는 지체 없이 해당 개인정보를 파기합니다. 파기의 절차, 기한 및 방법은 다음과 같습니다:</p>
                 
                 <div className="space-y-4">
                   <div>
@@ -150,7 +150,7 @@ export default function PrivacyPage() {
 
               <section>
                 <h2 className="text-2xl font-semibold text-white mb-4">제 6조 개인정보의 안전성 확보 조치</h2>
-                <p className="mb-4">'눈칫'은 개인정보보호법 제29조에 따라 다음과 같이 안전성 확보에 필요한 기술적/관리적 및 물리적 조치를 하고 있습니다:</p>
+                <p className="mb-4">&apos;눈칫&apos;은 개인정보보호법 제29조에 따라 다음과 같이 안전성 확보에 필요한 기술적/관리적 및 물리적 조치를 하고 있습니다:</p>
                 
                 <div className="grid md:grid-cols-2 gap-6">
                   <div className="bg-slate-800/30 rounded-lg p-6">
@@ -193,7 +193,7 @@ export default function PrivacyPage() {
 
               <section>
                 <h2 className="text-2xl font-semibold text-white mb-4">제 7조 개인정보 보호책임자</h2>
-                <p className="mb-6">'눈칫'은 개인정보 처리에 관한 업무를 총괄해서 책임지고, 개인정보 처리와 관련한 정보주체의 불만처리 및 피해구제 등을 위하여 아래와 같이 개인정보 보호책임자를 지정하고 있습니다.</p>
+                <p className="mb-6">&apos;눈칫&apos;은 개인정보 처리에 관한 업무를 총괄해서 책임지고, 개인정보 처리와 관련한 정보주체의 불만처리 및 피해구제 등을 위하여 아래와 같이 개인정보 보호책임자를 지정하고 있습니다.</p>
                 
                 <div className="bg-gradient-to-r from-blue-500/10 to-purple-500/10 border border-blue-500/20 rounded-xl p-6">
                   <h3 className="text-xl font-semibold text-blue-400 mb-4">▶ 개인정보 보호책임자</h3>
@@ -205,7 +205,7 @@ export default function PrivacyPage() {
                   </div>
                 </div>
                 
-                <p className="mt-6 text-slate-400">정보주체께서는 '눈칫'의 서비스를 이용하시면서 발생한 모든 개인정보 보호 관련 문의, 불만처리, 피해구제 등에 관한 사항을 개인정보 보호책임자에게 문의하실 수 있습니다. '눈칫'은 정보주체의 문의에 대해 지체 없이 답변 및 처리해드릴 것입니다.</p>
+                <p className="mt-6 text-slate-400">정보주체께서는 &apos;눈칫&apos;의 서비스를 이용하시면서 발생한 모든 개인정보 보호 관련 문의, 불만처리, 피해구제 등에 관한 사항을 개인정보 보호책임자에게 문의하실 수 있습니다. &apos;눈칫&apos;은 정보주체의 문의에 대해 지체 없이 답변 및 처리해드릴 것입니다.</p>
               </section>
 
               <section>
