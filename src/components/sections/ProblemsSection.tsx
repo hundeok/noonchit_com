@@ -33,24 +33,60 @@ export default function ProblemsSection({ problemScale, problemOpacity }: Proble
             // 이미지 배열
             const problemImages = [problem1, problem2, problem3, problem4, problem5, problem6];
             
-            // 더 정갈한 시작 위치 (좌우 대칭)
+            // 웹과 모바일 구분한 정갈한 시작 위치
             const startPositions = [
-              { x: -300, y: -150 },  // 왼쪽 위
-              { x: 300, y: -150 },   // 오른쪽 위
-              { x: -350, y: 0 },     // 왼쪽 중간
-              { x: 350, y: 0 },      // 오른쪽 중간
-              { x: -300, y: 150 },   // 왼쪽 아래
-              { x: 300, y: 150 }     // 오른쪽 아래
+              { 
+                x: typeof window !== 'undefined' && window.innerWidth < 768 ? -150 : -300, 
+                y: typeof window !== 'undefined' && window.innerWidth < 768 ? -80 : -150 
+              },  // 왼쪽 위
+              { 
+                x: typeof window !== 'undefined' && window.innerWidth < 768 ? 150 : 300, 
+                y: typeof window !== 'undefined' && window.innerWidth < 768 ? -80 : -150 
+              },   // 오른쪽 위
+              { 
+                x: typeof window !== 'undefined' && window.innerWidth < 768 ? -180 : -350, 
+                y: 0 
+              },     // 왼쪽 중간
+              { 
+                x: typeof window !== 'undefined' && window.innerWidth < 768 ? 180 : 350, 
+                y: 0 
+              },      // 오른쪽 중간
+              { 
+                x: typeof window !== 'undefined' && window.innerWidth < 768 ? -150 : -300, 
+                y: typeof window !== 'undefined' && window.innerWidth < 768 ? 80 : 150 
+              },   // 왼쪽 아래
+              { 
+                x: typeof window !== 'undefined' && window.innerWidth < 768 ? 150 : 300, 
+                y: typeof window !== 'undefined' && window.innerWidth < 768 ? 80 : 150 
+              }     // 오른쪽 아래
             ];
 
-            // 정갈하게 퍼지는 최종 위치
+            // 웹과 모바일 구분한 정갈한 최종 위치
             const bouncePositions = [
-              { x: -200, y: -100 },  // 왼쪽 위
-              { x: 200, y: -100 },   // 오른쪽 위
-              { x: -250, y: 0 },     // 왼쪽 중간
-              { x: 250, y: 0 },      // 오른쪽 중간
-              { x: -200, y: 100 },   // 왼쪽 아래
-              { x: 200, y: 100 }     // 오른쪽 아래
+              { 
+                x: typeof window !== 'undefined' && window.innerWidth < 768 ? -100 : -200, 
+                y: typeof window !== 'undefined' && window.innerWidth < 768 ? -60 : -100 
+              },  // 왼쪽 위
+              { 
+                x: typeof window !== 'undefined' && window.innerWidth < 768 ? 100 : 200, 
+                y: typeof window !== 'undefined' && window.innerWidth < 768 ? -60 : -100 
+              },   // 오른쪽 위
+              { 
+                x: typeof window !== 'undefined' && window.innerWidth < 768 ? -120 : -250, 
+                y: 0 
+              },     // 왼쪽 중간
+              { 
+                x: typeof window !== 'undefined' && window.innerWidth < 768 ? 120 : 250, 
+                y: 0 
+              },      // 오른쪽 중간
+              { 
+                x: typeof window !== 'undefined' && window.innerWidth < 768 ? -100 : -200, 
+                y: typeof window !== 'undefined' && window.innerWidth < 768 ? 60 : 100 
+              },   // 왼쪽 아래
+              { 
+                x: typeof window !== 'undefined' && window.innerWidth < 768 ? 100 : 200, 
+                y: typeof window !== 'undefined' && window.innerWidth < 768 ? 60 : 100 
+              }     // 오른쪽 아래
             ];
 
             return (
