@@ -1,6 +1,13 @@
 'use client';
 import { motion, MotionValue } from 'framer-motion';
 import { PROBLEMS } from '@/lib/constants';
+import Image from 'next/image';
+import problem1 from '@/assets/problem1.png';
+import problem2 from '@/assets/problem2.png';
+import problem3 from '@/assets/problem3.png';
+import problem4 from '@/assets/problem4.png';
+import problem5 from '@/assets/problem5.png';
+import problem6 from '@/assets/problem6.png';
 
 interface ProblemsSectionProps {
   problemScale: MotionValue<number>;
@@ -23,24 +30,27 @@ export default function ProblemsSection({ problemScale, problemOpacity }: Proble
 
         <div className="relative w-full h-96">
           {PROBLEMS.map((problem, index) => {
-            // 더 다이나믹한 시작 위치
+            // 이미지 배열
+            const problemImages = [problem1, problem2, problem3, problem4, problem5, problem6];
+            
+            // 더 정갈한 시작 위치 (좌우 대칭)
             const startPositions = [
-              { x: -350, y: -180 },
-              { x: 400, y: -200 },
-              { x: -380, y: 50 },
-              { x: 420, y: 80 },
-              { x: -320, y: 220 },
-              { x: 350, y: 180 }
+              { x: -300, y: -150 },  // 왼쪽 위
+              { x: 300, y: -150 },   // 오른쪽 위
+              { x: -350, y: 0 },     // 왼쪽 중간
+              { x: 350, y: 0 },      // 오른쪽 중간
+              { x: -300, y: 150 },   // 왼쪽 아래
+              { x: 300, y: 150 }     // 오른쪽 아래
             ];
 
-            // 튕기면서 퍼지는 최종 위치
+            // 정갈하게 퍼지는 최종 위치
             const bouncePositions = [
-              { x: -280, y: -120 },
-              { x: 300, y: -140 },
-              { x: -320, y: 30 },
-              { x: 340, y: 60 },
-              { x: -250, y: 150 },
-              { x: 280, y: 120 }
+              { x: -200, y: -100 },  // 왼쪽 위
+              { x: 200, y: -100 },   // 오른쪽 위
+              { x: -250, y: 0 },     // 왼쪽 중간
+              { x: 250, y: 0 },      // 오른쪽 중간
+              { x: -200, y: 100 },   // 왼쪽 아래
+              { x: 200, y: 100 }     // 오른쪽 아래
             ];
 
             return (
@@ -64,8 +74,8 @@ export default function ProblemsSection({ problemScale, problemOpacity }: Proble
                     0,                        // 중앙으로 모임
                     bouncePositions[index].y  // 튕기면서 퍼짐
                   ],
-                  scale: [1.1, 0.6, 1],      // 작아졌다가 다시 커짐
-                  opacity: [0.8, 1, 0.9]     // 투명도 변화
+                  scale: [1, 0.5, 1.2],       // 작아졌다가 더 크게!
+                  opacity: [0.8, 1, 0.9]      // 투명도 변화
                 }}
                 style={{
                   left: '50%',
@@ -81,8 +91,25 @@ export default function ProblemsSection({ problemScale, problemOpacity }: Proble
                 }}
                 viewport={{ once: false }}
               >
-                <div className="bg-red-500/20 border border-red-500/30 rounded-xl px-6 py-4 text-red-200 whitespace-nowrap shadow-lg">
-                  ❌ {problem}
+                <div className="relative">
+                  {/* 문제점 이미지 + 제목 오버레이 */}
+                  <div className="relative w-24 h-24 mb-3 mx-auto group">
+                    <Image
+                      src={problemImages[index]}
+                      alt={`문제점 ${index + 1}`}
+                      width={96}
+                      height={96}
+                      className="w-full h-full object-cover rounded-xl shadow-lg"
+                    />
+                    
+                    {/* 글로우 효과 */}
+                    <div className="absolute -inset-1 bg-gradient-to-r from-red-500/30 to-pink-500/30 rounded-xl blur-sm -z-10 opacity-50"></div>
+                  </div>
+                  
+                  {/* 하단 문제점 텍스트 */}
+                  <div className="bg-red-500/20 border border-red-500/30 rounded-lg px-3 py-1 text-red-200 text-xs shadow-lg">
+                    {problem}
+                  </div>
                 </div>
               </motion.div>
             );
