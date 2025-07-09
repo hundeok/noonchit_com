@@ -2,12 +2,12 @@
 import { motion, MotionValue } from 'framer-motion';
 import Image from 'next/image';
 import icon from '@/assets/icon.png';
-import app1 from '@/assets/app1.png';
-import app2 from '@/assets/app2.png';
-import app3 from '@/assets/app3.png';
-import app4 from '@/assets/app4.png';
-import app5 from '@/assets/app5.png';
-import app6 from '@/assets/app6.png';
+import app1 from '@/assets/app1.PNG';
+import app2 from '@/assets/app2.PNG';
+import app3 from '@/assets/app3.PNG';
+import app4 from '@/assets/app4.PNG';
+import app5 from '@/assets/app5.PNG';
+import app6 from '@/assets/app6.PNG';
 
 interface SolutionSectionProps {
   solutionScale: MotionValue<number>;
@@ -44,47 +44,55 @@ export default function SolutionSection({ solutionScale, solutionOpacity }: Solu
             }}
           />
           
-          {/* 나선형으로 펼쳐지는 앱 스크린샷들 */}
-          {appImages.map((appImage, index) => (
-            <motion.div
-              key={index}
-              className="absolute"
-              initial={{ 
-                scale: 0,
-                opacity: 0,
-                x: 0,
-                y: 0,
-                rotate: 0
-              }}
-              whileInView={{
-                scale: [0, 1.2, 1],
-                opacity: [0, 0.8, 0.6],
-                x: Math.cos((index * 60) * Math.PI / 180) * (80 + index * 15),
-                y: Math.sin((index * 60) * Math.PI / 180) * (80 + index * 15),
-                rotate: index * 15
-              }}
-              transition={{
-                duration: 1.5,
-                delay: index * 0.2,
-                ease: [0.4, 0, 0.2, 1]
-              }}
-              viewport={{ once: true }}
-              style={{
-                left: '50%',
-                top: '50%',
-                marginLeft: '-40px',
-                marginTop: '-60px'
-              }}
-            >
-              <Image
-                src={appImage}
-                alt={`앱 스크린샷 ${index + 1}`}
-                width={80}
-                height={120}
-                className="rounded-lg shadow-lg opacity-60"
-              />
-            </motion.div>
-          ))}
+          {/* 회오리 패턴으로 펼쳐지는 앱 스크린샷들 */}
+          {appImages.map((appImage, index) => {
+            // 12시 방향부터 시계방향으로 정돈된 회오리 패턴
+            const angle = (index * 60 - 90) * Math.PI / 180; // -90도로 12시 방향 시작
+            const radius = 70 + index * 20; // 바깥쪽으로 점점 멀어짐
+            const spiralX = Math.cos(angle) * radius;
+            const spiralY = Math.sin(angle) * radius;
+            
+            return (
+              <motion.div
+                key={index}
+                className="absolute"
+                initial={{ 
+                  scale: 0,
+                  opacity: 0,
+                  x: 0,
+                  y: 0,
+                  rotate: 0
+                }}
+                whileInView={{
+                  scale: [0, 1.2, 1],
+                  opacity: [0, 0.8, 0.6],
+                  x: spiralX,
+                  y: spiralY,
+                  rotate: index * 10 // 살짝만 회전
+                }}
+                transition={{
+                  duration: 1.5,
+                  delay: index * 0.15,
+                  ease: [0.4, 0, 0.2, 1]
+                }}
+                viewport={{ once: true }}
+                style={{
+                  left: '50%',
+                  top: '50%',
+                  marginLeft: '-40px',
+                  marginTop: '-60px'
+                }}
+              >
+                <Image
+                  src={appImage}
+                  alt={`앱 스크린샷 ${index + 1}`}
+                  width={80}
+                  height={120}
+                  className="rounded-lg shadow-lg opacity-60"
+                />
+              </motion.div>
+            );
+          })}
           
           {/* 회전하는 로고 (가장 위에) */}
           <motion.div
