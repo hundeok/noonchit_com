@@ -114,7 +114,7 @@ export default function ProblemsSection({ problemScale, problemOpacity }: Proble
                   opacity: [0.8, 1, 0.9]      // 투명도 변화
                 }}
                 style={{
-                  left: '50%',
+                  left: '45%',  // 50% → 45% (왼쪽으로 20% 이동)
                   top: '50%',
                   scale: problemScale,
                   opacity: problemOpacity

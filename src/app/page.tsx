@@ -17,6 +17,20 @@ export default function NoonchitLanding() {
     offset: ["start start", "end end"]
   });
 
+  // Solution 섹션 전용 ref 와 useScroll
+  const solutionRef = useRef<HTMLDivElement>(null);
+  const { scrollYProgress: solutionScrollProgress } = useScroll({
+    target: solutionRef,
+    offset: ["start end", "center center"] 
+  });
+
+  // Features 섹션 전용 ref 와 useScroll 추가
+  const featuresRef = useRef<HTMLDivElement>(null);
+  const { scrollYProgress: featuresScrollProgress } = useScroll({
+    target: featuresRef,
+    offset: ["start end", "start center"]
+  });
+
   // 스크롤 기반 변환들
   const heroScale = useTransform(scrollYProgress, [0, 0.15], [1, 0.9]);
   const heroOpacity = useTransform(scrollYProgress, [0, 0.15], [1, 0.3]);
@@ -25,12 +39,14 @@ export default function NoonchitLanding() {
   // 문제점들이 모이는 효과
   const problemScale = useTransform(scrollYProgress, [0.15, 0.25], [1, 0]);
   const problemOpacity = useTransform(scrollYProgress, [0.15, 0.25], [1, 0]);
-  const solutionScale = useTransform(scrollYProgress, [0.2, 0.3], [0, 1]);
-  const solutionOpacity = useTransform(scrollYProgress, [0.2, 0.3], [0, 1]);
+
+  // Solution 애니메이션 로직
+  const solutionScale = useTransform(solutionScrollProgress, [0, 1], [0.8, 1]);
+  const solutionOpacity = useTransform(solutionScrollProgress, [0, 1], [0, 1]);
   
-  // 대시보드 등장
-  const dashboardY = useTransform(scrollYProgress, [0.5, 0.65], ['100%', '0%']);
-  const dashboardScale = useTransform(scrollYProgress, [0.5, 0.65], [0.8, 1]);
+  // 대시보드(Features) 애니메이션 로직 수정
+  const dashboardY = useTransform(featuresScrollProgress, [0, 1], ['30%', '0%']);
+  const dashboardScale = useTransform(featuresScrollProgress, [0, 1], [0.9, 1]);
   
   // 배경 색상 전환
   const bgColor = useTransform(
@@ -115,12 +131,14 @@ export default function NoonchitLanding() {
         problemOpacity={problemOpacity} 
       />
       
-      <SolutionSection 
+      <SolutionSection
+        ref={solutionRef}
         solutionScale={solutionScale} 
         solutionOpacity={solutionOpacity} 
       />
       
-      <FeaturesSection 
+      <FeaturesSection
+        ref={featuresRef}
         dashboardY={dashboardY} 
         dashboardScale={dashboardScale} 
       />
